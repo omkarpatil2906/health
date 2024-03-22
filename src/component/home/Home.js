@@ -5,6 +5,7 @@ import HappyCustomer from './HappyCustomer'
 import OperationalCities from './OperationalCities'
 import AllServices from './AllSerices'
 import Home2 from './Home2'
+import MultiCarousel from './MultiCarousel'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <MedicalService />
       <NewOffer />
       <HappyCustomer />
+      {/* <MultiCarousel/> */}
       <OperationalCities />
       <AllServices />
     </div>

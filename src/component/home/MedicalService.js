@@ -97,7 +97,7 @@ function MedicalService() {
                                 <h1 className='text-2xl xl:text-xl font-poppins'>{item.titile}</h1>
                                 <button className='text-xl lg:text-lg text-orange-600 font-Montserrat'>Book Now</button>
                             </div>
-                            <div className='w-[100%] flex justify-end items-end h-full rounded-ss-full bg-orange-300 overflow-hidden'>
+                            <div className='w-[100%] flex justify-end items-end h-full '>
                                 <img src={item.Image} className='h-44 object-cover' alt='' />
                             </div>
                         </div>

@@ -22,6 +22,7 @@ import { TfiMenu } from "react-icons/tfi";
 import { IoClose } from "react-icons/io5";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import BookNow from '../book/BookNow';
 
 
 
@@ -119,6 +120,10 @@ function Navbar() {
   const [countryAnchorEl, setCountryAnchorEl] = React.useState(null);
   const [showMap, setShowMap] = useState(true);
 
+  const handleListClick = () => {
+    setOpen(false);
+  } 
+
   const handleClick = () => {
     setShowMap(true);
   }
@@ -132,9 +137,7 @@ function Navbar() {
   }
 
   function handleServicesClose(event, path) {
-    if (path) {
-      window.location.href = path;
-    }
+  
     setServicesAnchorEl(null);
   }
 
@@ -156,6 +159,14 @@ function Navbar() {
               <img src="https://www.portea.com/static/logo-bdce0308d6dac6258f5f9c30993083ac.svg" className='h-12' alt="" />
             </h1>
 
+            {/* <div  className='flex items-center bg-blue-100 p-2 text-lg font-bold rounded-lg'>
+                <img src={indFlag} className='h-5' alt="" />
+                <div className='flex items-center space-x-2'>
+                  <button> <BiSolidPhoneCall className='text-xl text-red-500' /></button>
+                  <h1>+1800 121 2323</h1>
+                </div>
+              </div> */}
+
             <div>
               <button onClick={() => setOpen(!open)}>{open ? <IoClose className='text-4xl' /> : <TfiMenu className='text-3xl' />}</button>
             </div>
@@ -164,7 +175,7 @@ function Navbar() {
 
           <div>
 
-            <ul className={open ? "fixed top-14 p-5 space-y-2 right-0 h-screen w-[80%] bg-white  transition-transform duration-500 translate-x-0" : "fixed top-14 right-0 p-5 space-y-2 h-screen w-[80%] bg-white  transition-transform duration-500 translate-x-full"}>
+            <ul className={open ? "fixed top-16 p-5 space-y-2 right-0 h-screen w-[80%] bg-white  transition-transform duration-500 translate-x-0" : "fixed top-16 right-0 p-5 space-y-2 h-screen w-[80%] bg-white  transition-transform duration-500 translate-x-full"}>
 
               <li>
                 <div className='flex justify-between' onClick={showMap ? handleClose : handleClick}>
@@ -177,14 +188,14 @@ function Navbar() {
                     {obj.map((item) => (
                       <div className='flex gap-2' key={item.id}>
                         <img src={item.img} className='h-4 w-5' alt="" />
-                        <h1 className='cursor-pointer font-poppins'><Link to={item.path}> {item.name}</Link></h1>
+                        <h1 className='cursor-pointer font-poppins'  onClick={handleListClick}><Link to={item.path}> {item.name}</Link></h1>
                       </div>
                     ))}
                   </div>
                 )}
               </li>
               <hr />
-              <li className='font-poppins font-bold'>About Us</li>
+              <li className='font-poppins font-bold' onClick={handleListClick}><Link to='/about'> About Us</Link> </li>
               <li className='font-poppins font-bold'>Investor Relation</li>
 
               <button className='font-Montserrat bg-orange-500 px-3 p-1 text-white rounded-lg'>Book Now</button>
@@ -205,7 +216,7 @@ function Navbar() {
 
           <div className='w-[70%] justify-between items-center hidden lg:flex'>
             <li className=''>
-              <h1 onClick={handleServicesClick}  className='flex items-center cursor-pointer hover:text-[#00979e] gap-2'> Our Services <span><IoIosArrowDown /></span></h1>
+              <h1 onClick={handleServicesClick} onMouseEnter={handleServicesClick}  className='flex items-center cursor-pointer hover:text-[#00979e] gap-2'> Our Services <span><IoIosArrowDown /></span></h1>
               <Menu
                 id="services-menu"
                 anchorEl={servicesAnchorEl}
@@ -220,16 +231,15 @@ function Navbar() {
                     obj.map((item) => (
                       <div key={item.id} className='flex gap-2'>
                         <img src={item.img} className='h-6 w-12' alt="" />
-                        <h1 className='cursor-pointer hover:text-[#00979e] font-poppins'  onClick={(event) => handleServicesClose(event, item.path)}> <Link to={item.path}> {item.name}</Link></h1>
+                        <h1 className='cursor-pointer hover:text-[#00979e] text-sm font-poppins'  onClick={() => handleServicesClose()}> <Link to={item.path}> {item.name}</Link></h1>
                       </div>
                     ))
                   }
-
                 </div>
 
               </Menu>
             </li>
-            <li className='cursor-pointer hover:text-[#00979e]'>About Us</li>
+            <li className='cursor-pointer hover:text-[#00979e]'><Link to='/about'>About Us</Link></li>
             <li className='cursor-pointer hover:text-[#00979e]'>Investor Relations</li>
             <li className=''>
 
@@ -264,11 +274,10 @@ function Navbar() {
                       <p className='text-orange-500'>(Outside India)</p>
                     </div>
                   </div>
-
                 </div>
               </Menu>
             </li>
-            <button className='bg-orange-500 px-12 p-2 rounded-xl text-white '>Book Now</button>
+            <div  className='bg-orange-500 px-12 p-2 rounded-xl text-white '><BookNow/></div>
           </div>
         </ul>
       </nav>

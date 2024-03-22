@@ -17,7 +17,7 @@ function ExpertPanel() {
           title: 'Diagnosed with Acute Demyelinating Encephalopathy and Seizure Disorders',
           description: 'This 32 year old, female patient diagnosed with acute demyelinating encephalopathy and seizure d...'
         },
-        // Add other slide data here
+     
       ];
   return (
     <div className="slick-list">

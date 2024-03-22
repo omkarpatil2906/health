@@ -1,25 +1,23 @@
 import React from 'react'
-import PhysiotherapyHome from './PhysiotherophyHome'
-import Workss from './Workss'
 import { Link } from 'react-router-dom'
+import LabTestHome from './LabTestHome'
 
-
-function Physiotherapy() {
+function LabTest() {
   return (
     <div>
-      <PhysiotherapyHome/>
+      <LabTestHome/>
       <div className='bg-[#fafafa] text-sm font-Montserrat'>
         <ul className='flex space-x-2 p-4'>
         <li className='font-bold  text-orange-500'> <Link to='/'> Home  &#62; </Link>  </li>
-        <li className='font-bold  text-orange-500'>Physiotherapy  &#62; </li>
-        <li>Physiotherapy At Home</li>
+        <li className='font-bold  text-orange-500'> Lab Sample Collection &#62; </li>
+        <li>Diagnostics Lab Tests At Home Service</li>
 
         </ul>
       </div>
-      <Workss/>
-    
+     
+ 
     </div>
   )
 }
 
-export default Physiotherapy
+export default LabTest

@@ -11,7 +11,7 @@ function About() {
                     <li> &#62; Press & Media</li>
                     <li> &#62;  Annual Return </li>
                     <li> &#62; Careers</li>
-                    <li> &#62; artner With Us</li>
+                    <li> &#62; Partner With Us</li>
                     <li> &#62; Contact Us</li>
                     <li> &#62; FAQs </li>
                     <li> &#62; Testimonials</li>

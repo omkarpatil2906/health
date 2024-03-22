@@ -51,7 +51,7 @@ function HappyCustomer() {
     };
 
     const items = obj.map(item => (
-        <div key={item.id} className='flex flex-col justify-center items-center py-12 space-y-6 lg:h-96 bg-[#f8fbfd]'>
+        <div key={item.id} className='flex flex-col justify-center m-2 items-center py-12 space-y-6 lg:h-96 bg-[#f8fbfd]'>
             <img src={item.img} className='h-12' alt='' />
             <h1 className='font-Montserrat text-2xl font-bold text-[#4a4a4a]'>{item.name}</h1>
             <p className='font-poppins italic font-light text-justify px-3 text-[#4a4a4a]'>{item.massage}</p>

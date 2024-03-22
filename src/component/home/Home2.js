@@ -3,7 +3,7 @@ import React from 'react'
 function Home2() {
     return (
         <div>
-            <div className='flex flex-col items-center justify-center h-screen mt-24 md:m-0'>
+            <div className='flex flex-col items-center justify-center h-screen sm:mt-24 md:m-0'>
 
                 <div className='flex flex-col lg:flex-row-reverse items-center justify-center h-[100%]'>
                     <div className='px-5 flex justify-center lg:w-[100%]'>

@@ -1,9 +1,16 @@
-import { TextField } from '@mui/material'
 import React from 'react'
-import Select from 'react-select'
-import womanpng from '../footer/asset/woman.png'
+import Select from 'react-select';
+import { TextField } from '@mui/material';
+import { useForm } from 'react-hook-form';
 
-function HomeVisit() {
+function ContactDetails({ handleNext }) {
+
+    const { register, handleSubmit, formState: { errors } } = useForm()
+
+    const Submit = (data) => {
+        console.log(data);
+        handleNext()
+    }
     const cityOptions = [
         { value: 'mumbai', label: 'Mumbai' },
         { value: 'pune', label: 'Pune' },
@@ -17,35 +24,33 @@ function HomeVisit() {
         { value: 'akola', label: 'Akola' },
     ];
     return (
-        <div className='flex w-full justify-center mt-12'>
+        <div className='flex flex-col justify-center items-center w-full'>
+            <form autoComplete='off' onSubmit={handleSubmit(Submit)} className='flex flex-col justify-center w-[70%]  space-y-6 p-12'>
 
-            <div className='bg-white p-5 m-4 lg:w-full border-2 border-orange-500 rounded-lg'>
-                <div className='flex justify-center'>
-                    <div className='bg-white p-2 rounded-full -mt-12'>
-                        <div className='bg-orange-500 p-3 rounded-full'>
-                            <img src={womanpng} className='h-7' alt="woman" />
-                        </div>
-                    </div>
-                </div>
-                <h1 className='text-center font-bold text-lg font-poppins'> Home Visit</h1>
+                <div>
 
-
-
-                <form className='flex flex-col justify-center  space-y-2'>
-                    <label htmlFor="name" className='font-poppins text-orange-500'>Name: </label>
+                    <label htmlFor="name" className='font-poppins text-sm'>Name: </label><br />
                     <TextField
                         size='small'
                         placeholder='Please provide your name'
+                        {...register("Name", { required: "Name is required" })}
+                        className='w-full'
                         sx={{
                             '& .MuiInputBase-input::placeholder': {
                                 fontSize: '0.9rem',
                                 fontFamily: 'Poppins, sans-serif',
                             },
+                            '& .MuiInputBase-input.MuiOutlinedInput-input': {
+                                height: '20px',
+                            },
 
                         }}
                     />
+                </div>
 
-                    <label htmlFor="phoneNumber" className='font-poppins text-orange-500'>Phone Number: </label>
+                <div>
+
+                    <label htmlFor="phoneNumber" className='font-poppins text-sm'>Phone Number: </label><br />
                     <TextField
                         size='small'
                         placeholder='To Coordinate with you'
@@ -55,11 +60,18 @@ function HomeVisit() {
                                 fontSize: '0.9rem',
                                 fontFamily: 'Poppins, sans-serif',
                             },
+                            '& .MuiInputBase-input.MuiOutlinedInput-input': {
+                                height: '20px',
+                            },
 
                         }}
                     />
+                </div>
 
-                    <label htmlFor="city" className='font-poppins text-orange-500'>City</label>
+
+                <div>
+
+                    <label htmlFor="city" className='font-poppins text-sm'>City</label> <br />
                     <Select
                         options={cityOptions}
                         placeholder='Service Need In?'
@@ -78,31 +90,15 @@ function HomeVisit() {
                             }),
                         }}
                     />
+                </div>
 
 
-                    <span className='italic font-Montserrat font-light text-sm'>*I authorize Portea representative to contact me. I understand that this will override the DND status on my mobile number. </span>
+                <button type='submit' className='bg-orange-400 font-Montserrat text-white p-2 '>Next</button>
 
-
-                    <button className='bg-orange-400 font-Montserrat text-white p-2 rounded-xl'>BOOK APPOINMENT</button>
-                </form>
-            </div>
+            </form>
 
         </div>
     )
 }
 
-export default HomeVisit
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default ContactDetails

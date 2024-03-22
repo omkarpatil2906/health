@@ -1,25 +1,24 @@
 import React from 'react'
-import PhysiotherapyHome from './PhysiotherophyHome'
-import Workss from './Workss'
+import TrainedHome from './TrainedHome'
 import { Link } from 'react-router-dom'
+import TrainedService from './TrainedService'
 
-
-function Physiotherapy() {
+function TrainedAttendants() {
   return (
     <div>
-      <PhysiotherapyHome/>
+      <TrainedHome/>
       <div className='bg-[#fafafa] text-sm font-Montserrat'>
         <ul className='flex space-x-2 p-4'>
         <li className='font-bold  text-orange-500'> <Link to='/'> Home  &#62; </Link>  </li>
-        <li className='font-bold  text-orange-500'>Physiotherapy  &#62; </li>
-        <li>Physiotherapy At Home</li>
+        <li className='font-bold  text-orange-500'>Trained Attendants  &#62; </li>
+        <li>Trained Attendants</li>
 
         </ul>
       </div>
-      <Workss/>
-    
+     
+    <TrainedService/>
     </div>
   )
 }
 
-export default Physiotherapy
+export default TrainedAttendants
