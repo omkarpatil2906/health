@@ -197,12 +197,8 @@ function Navbar() {
               <hr />
               <li className='font-poppins font-bold' onClick={handleListClick}><Link to='/about'> About Us</Link> </li>
               <li className='font-poppins font-bold'>Investor Relation</li>
-
               <button className='font-Montserrat bg-orange-500 px-3 p-1 text-white rounded-lg'>Book Now</button>
-
             </ul>
-
-
           </div>
 
         </div>
@@ -243,7 +239,7 @@ function Navbar() {
             <li className='cursor-pointer hover:text-[#00979e]'>Investor Relations</li>
             <li className=''>
 
-              <div onClick={handleCountryClick} onMouseEnter={handleCountryClick} className='flex items-center bg-blue-100 p-2 text-lg font-bold rounded-lg'>
+              <div onClick={handleCountryClick}  className='flex items-center bg-blue-100 p-2 text-lg font-bold rounded-lg'>
                 <img src={indFlag} className='h-5' alt="" />
                 <div className='flex items-center space-x-2'>
                   <button> <BiSolidPhoneCall className='text-xl text-red-500' /></button>

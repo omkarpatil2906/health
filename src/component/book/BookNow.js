@@ -11,6 +11,7 @@ const style = {
     transform: 'translate(-50%, -50%)',
     width: 500,
     bgcolor: 'white',
+
     // boxShadow: 24,
 };
 
@@ -27,15 +28,15 @@ function BookNow() {
                 return <ContactDetails handleNext={handleNext} />;
             case 2:
                 return <DateTime />;
-             case 2:
-                    return <DateTime />;
-            
+            case 2:
+                return <DateTime />;
+
         }
     }
 
     const handleNext = () => {
         setCurrentStep((prevStep) => prevStep + 1);
-      };
+    };
 
     return (
         <div>
@@ -59,21 +60,21 @@ function BookNow() {
                         <div className=''>
                             <div className='flex justify-between p-5 bg-[#fafafa]'>
 
-                            <Stepper sx={{width:'100%'}} activeStep={currentStep - 1} alternativeLabel className=''>
-                                <Step>
-                                    <StepLabel>Contact</StepLabel>
-                                </Step>
-                                <Step>
-                                    <StepLabel>Select</StepLabel>
-                                </Step>
-                                <Step>
-                                    <StepLabel>Select</StepLabel>
-                                </Step>
-                            </Stepper>
+                                <Stepper sx={{ width: '100%' }}  activeStep={currentStep - 1} alternativeLabel >
+                                    <Step>
+                                        <StepLabel sx={{}}>CONTACT DETAILS</StepLabel>
+                                    </Step>
+                                    <Step>
+                                        <StepLabel>SELECT DATE & TIME</StepLabel>
+                                    </Step>
+                                    <Step>
+                                        <StepLabel>SERVICE DETAILS</StepLabel>
+                                    </Step>
+                                </Stepper>
                             </div>
                             {showStep(currentStep)}
-                           
-                          
+
+
                         </div>
                     </div>
                 </Box>

@@ -25,7 +25,7 @@ function ContactDetails({ handleNext }) {
     ];
     return (
         <div className='flex flex-col justify-center items-center w-full'>
-            <form autoComplete='off' onSubmit={handleSubmit(Submit)} className='flex flex-col justify-center w-[70%]  space-y-6 p-12'>
+            <form autoComplete='off' onSubmit={handleSubmit(Submit)} className='flex flex-col justify-center w-[90%]  space-y-6 p-12'>
 
                 <div>
 
@@ -93,7 +93,7 @@ function ContactDetails({ handleNext }) {
                 </div>
 
 
-                <button type='submit' className='bg-orange-400 font-Montserrat text-white p-2 '>Next</button>
+                <button type='submit' className='bg-orange-400 font-poppins font-bold text-white uppercase p-2 '>Next</button>
 
             </form>
 

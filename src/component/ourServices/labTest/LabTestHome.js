@@ -9,7 +9,7 @@ function LabTestHome() {
                 backgroundRepeat: 'no-repeat',
                 width: '100%',
                 backgroundSize: 'cover',
-                height: 600,
+                height: 660,
                 backgroundPosition: 'center',
             }}>
                

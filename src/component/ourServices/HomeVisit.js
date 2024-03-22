@@ -2,8 +2,10 @@ import { TextField } from '@mui/material'
 import React from 'react'
 import Select from 'react-select'
 import womanpng from '../footer/asset/woman.png'
+import { Controller, useForm } from 'react-hook-form'
 
 function HomeVisit() {
+    const { register, handleSubmit, control, formState: { errors } } = useForm()
     const cityOptions = [
         { value: 'mumbai', label: 'Mumbai' },
         { value: 'pune', label: 'Pune' },
@@ -16,6 +18,9 @@ function HomeVisit() {
         { value: 'vasai-virar', label: 'Vasai-Virar' },
         { value: 'akola', label: 'Akola' },
     ];
+    const submit = (data) => {
+        console.log(data);
+    }
     return (
         <div className='flex w-full justify-center mt-12'>
 
@@ -31,18 +36,29 @@ function HomeVisit() {
 
 
 
-                <form className='flex flex-col justify-center  space-y-2'>
+                <form autoComplete='off' onSubmit={handleSubmit(submit)} className='flex flex-col justify-center  space-y-2'>
                     <label htmlFor="name" className='font-poppins text-orange-500'>Name: </label>
-                    <TextField
-                        size='small'
-                        placeholder='Please provide your name'
-                        sx={{
-                            '& .MuiInputBase-input::placeholder': {
-                                fontSize: '0.9rem',
-                                fontFamily: 'Poppins, sans-serif',
-                            },
 
-                        }}
+                    <Controller
+                        name="name"
+                        control={control}
+                        defaultValue=""
+                        render={({ field }) => (
+                            <TextField
+                                name='search'
+                                control={control}
+                                size='small'
+                                placeholder='Please provide your name'
+                                {...field}
+                                sx={{
+                                    '& .MuiInputBase-input::placeholder': {
+                                        fontSize: '0.9rem',
+                                        fontFamily: 'Poppins, sans-serif',
+                                    },
+
+                                }}
+                            />
+                        )}
                     />
 
                     <label htmlFor="phoneNumber" className='font-poppins text-orange-500'>Phone Number: </label>
@@ -50,6 +66,7 @@ function HomeVisit() {
                         size='small'
                         placeholder='To Coordinate with you'
                         className='w-[100%]'
+                        {...register('number')}
                         sx={{
                             '& .MuiInputBase-input::placeholder': {
                                 fontSize: '0.9rem',
@@ -63,6 +80,7 @@ function HomeVisit() {
                     <Select
                         options={cityOptions}
                         placeholder='Service Need In?'
+                        menuPlacement='top'
                         styles={{
                             indicatorSeparator: () => null,
                             control: (provided, state) => ({
@@ -76,6 +94,18 @@ function HomeVisit() {
                                 fontFamily: 'Poppins, sans-serif',
                                 color: '#aaa',
                             }),
+                            menu: (provided) => ({
+                                ...provided,
+                                '& ::-webkit-scrollbar': {
+                                    width: '10px',
+                                    backgroundColor: '#E0FFFF'
+                                },
+                                '& ::-webkit-scrollbar-thumb': {
+                                    backgroundColor: '#72A0C1',
+                                    borderRadius: '15px',
+                                },
+
+                            }),
                         }}
                     />
 
@@ -83,7 +113,7 @@ function HomeVisit() {
                     <span className='italic font-Montserrat font-light text-sm'>*I authorize Portea representative to contact me. I understand that this will override the DND status on my mobile number. </span>
 
 
-                    <button className='bg-orange-400 font-Montserrat text-white p-2 rounded-xl'>BOOK APPOINMENT</button>
+                    <button type='submit' className='bg-orange-400 font-Montserrat text-white p-2 rounded-xl'>BOOK APPOINMENT</button>
                 </form>
             </div>
 

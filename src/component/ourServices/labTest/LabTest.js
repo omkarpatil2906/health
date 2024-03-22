@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import LabTestHome from './LabTestHome'
+import CheckupPackage from './CheckupPackage'
 
 function LabTest() {
   return (
@@ -14,7 +15,7 @@ function LabTest() {
 
         </ul>
       </div>
-     
+     <CheckupPackage/>
  
     </div>
   )
