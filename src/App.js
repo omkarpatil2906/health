@@ -22,7 +22,7 @@ import CriticalCare from './component/ourServices/criticalCare/CriticalCare'
 
 function App() {
   return (
-    <div>
+    <div style={{ overflowY: 'auto', height: '100vh', scrollbarWidth: 'thin',  scrollbarColor: '#72A0C1 #E0FFFF', }}>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />

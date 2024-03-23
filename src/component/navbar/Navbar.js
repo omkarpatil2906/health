@@ -17,7 +17,7 @@ import CovidCrae from './asset/Covid Care.svg';
 import Vaccination from './asset/Vaccination.svg';
 import Counselling from './asset/Counselling.svg';
 import Nutrution from './asset/Nutrition & Diet Consultation.svg';
-import { IoIosArrowBack, IoIosArrowDown, IoIosArrowRoundUp, IoIosArrowUp } from "react-icons/io";
+import {  IoIosArrowDown} from "react-icons/io";
 import { TfiMenu } from "react-icons/tfi";
 import { IoClose } from "react-icons/io5";
 import { MdKeyboardArrowUp } from "react-icons/md";
@@ -150,7 +150,7 @@ function Navbar() {
   }
 
   return (
-    <div className='font-Montserrat font-medium sticky top-0 left-0 z-50 bg-white shadow-md '>
+    <div className='font-Montserrat font-medium sticky top-0 left-0 z-50 bg-white'>
       <nav>
 
         <div className='lg:hidden'>
@@ -207,12 +207,15 @@ function Navbar() {
 
         <ul className='hidden lg:flex justify-between items-center p-4 font-semibold '>
           <li className='w-[40%]'>
+            <Link to="/">
             <img src="https://www.portea.com/static/logo-bdce0308d6dac6258f5f9c30993083ac.svg" className='h-12' alt="" />
+            </Link>
+           
           </li>
 
           <div className='w-[70%] justify-between items-center hidden lg:flex'>
             <li className=''>
-              <h1 onClick={handleServicesClick} onMouseEnter={handleServicesClick}  className='flex items-center cursor-pointer hover:text-[#00979e] gap-2'> Our Services <span><IoIosArrowDown /></span></h1>
+              <h1 onClick={handleServicesClick} onMouseEnter={handleServicesClick}  className='flex items-center cursor-pointer hover:text-[#00979e] gap-2'> Our Services <span><IoIosArrowDown  className='text-[#00979e] text-xl'/></span></h1>
               <Menu
                 id="services-menu"
                 anchorEl={servicesAnchorEl}
@@ -225,7 +228,7 @@ function Navbar() {
                 <div className='grid grid-cols-2 gap-2 '>
                   {
                     obj.map((item) => (
-                      <div key={item.id} className='flex gap-2'>
+                      <div key={item.id} className='flex gap-2 p-2'>
                         <img src={item.img} className='h-6 w-12' alt="" />
                         <h1 className='cursor-pointer hover:text-[#00979e] text-sm font-poppins'  onClick={() => handleServicesClose()}> <Link to={item.path}> {item.name}</Link></h1>
                       </div>

@@ -11,7 +11,7 @@ function ContactUs() {
       <div className='text-white space-y-5 p-6 '>
         <h1 className='text-xl font-Montserrat font-bold'> <span className='border-b-4 py-2 border-[#009aa0]'>CONTACT</span>  US</h1>
 
-        <div className='space-y-4 font-poppins text-sm'>
+        <div className='space-y-4 font-poppins  text-md font-semibold '>
           <h1>For Bookings and Service queries:</h1>
           <div>
             <p>Ph: 1800 121 2323</p>

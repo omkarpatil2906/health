@@ -3,6 +3,7 @@ import { Box, Modal } from '@mui/material';
 import { Stepper, Step, StepLabel } from '@mui/material';
 import ContactDetails from './ContactDetails';
 import DateTime from './DateTime';
+import { IoCloseOutline } from "react-icons/io5";
 
 const style = {
     position: 'absolute',
@@ -28,8 +29,10 @@ function BookNow() {
                 return <ContactDetails handleNext={handleNext} />;
             case 2:
                 return <DateTime />;
-            case 2:
+            case 3:
                 return <DateTime />;
+            default:
+                return null;
 
         }
     }
@@ -50,7 +53,7 @@ function BookNow() {
                     <div>
                         <div className='bg-pink-100 w-full flex flex-col justify-center items-center p-3 '>
                             <div className=" flex justify-end w-full px-3">
-                                <button onClick={handleClose}>Close</button>
+                                <button onClick={handleClose}><IoCloseOutline/></button>
                             </div>
                             <img src="https://www.portea.com/static/logo-bdce0308d6dac6258f5f9c30993083ac.svg" alt="" className='h-14' />
                             <h1 className='font-semibold font-Montserrat'>Book Portea’s Medical Services at Home</h1>
@@ -60,7 +63,7 @@ function BookNow() {
                         <div className=''>
                             <div className='flex justify-between p-5 bg-[#fafafa]'>
 
-                                <Stepper sx={{ width: '100%' }}  activeStep={currentStep - 1} alternativeLabel >
+                                <Stepper sx={{ width: '100%' }} activeStep={currentStep - 1} alternativeLabel >
                                     <Step>
                                         <StepLabel sx={{}}>CONTACT DETAILS</StepLabel>
                                     </Step>

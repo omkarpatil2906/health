@@ -5,7 +5,7 @@ import womanpng from '../footer/asset/woman.png'
 import { Controller, useForm } from 'react-hook-form'
 
 function HomeVisit() {
-    const { register, handleSubmit, control, formState: { errors } } = useForm()
+    const { register, handleSubmit, control, } = useForm()
     const cityOptions = [
         { value: 'mumbai', label: 'Mumbai' },
         { value: 'pune', label: 'Pune' },

@@ -1,6 +1,7 @@
 import React from 'react'
 import ElderCareHome from './ElderCareHome'
 import { Link } from 'react-router-dom'
+import CarePlan from './CarePlan'
 
 function ElderCare() {
     return (
@@ -15,7 +16,7 @@ function ElderCare() {
                     <li>Elder Care At Home</li>
                 </ul>
             </div>
-        
+            <CarePlan />
         </div>
     )
 }

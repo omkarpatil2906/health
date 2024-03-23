@@ -1,5 +1,4 @@
 import React from 'react'
-import ConsultationHome from '../doctorConsultation/ConsultationHome'
 import { Link } from 'react-router-dom'
 import CounsellingHome from './CounsellingHome'
 

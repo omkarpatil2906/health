@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 
 function ContactDetails({ handleNext }) {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit} = useForm()
 
     const Submit = (data) => {
         console.log(data);

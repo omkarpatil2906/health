@@ -5,7 +5,7 @@ function About() {
         <div className=''>
             <div className='text-white space-y-5 p-6'>
                 <h1 className='text-xl font-Montserrat font-bold'> <span className='border-b-4 py-2 border-[#009aa0]'>ABOUT</span>  US</h1>
-                <ul className='font-poppins text-sm space-y-3'>
+                <ul className='font-poppins text-md font-semibold space-y-3 '>
                     <li> &#62;  Our Team</li>
                     <li> &#62; Doctor Speak</li>
                     <li> &#62; Press & Media</li>
