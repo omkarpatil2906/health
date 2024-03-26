@@ -24,9 +24,9 @@ function HomeVisit() {
     return (
         <div className='flex w-full justify-center mt-12'>
 
-            <div className='bg-white p-5 m-4 lg:w-full border-2 border-orange-500 rounded-lg'>
+            <div className='bg-white p-5 m-4 lg:w-full border-2 border-orange-500  rounded-lg'>
                 <div className='flex justify-center'>
-                    <div className='bg-white p-2 rounded-full -mt-12'>
+                    <div className='bg-white p-2 rounded-full border  border-black  -mt-12'>
                         <div className='bg-orange-500 p-3 rounded-full'>
                             <img src={womanpng} className='h-7' alt="woman" />
                         </div>

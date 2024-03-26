@@ -10,7 +10,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 500,
+ 
     bgcolor: 'white',
 
     // boxShadow: 24,
@@ -49,7 +49,7 @@ function BookNow() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box sx={style} className='xl:w-[30%]'>
                     <div>
                         <div className='bg-pink-100 w-full flex flex-col justify-center items-center p-3 '>
                             <div className=" flex justify-end w-full px-3">
@@ -64,14 +64,63 @@ function BookNow() {
                             <div className='flex justify-between p-5 bg-[#fafafa]'>
 
                                 <Stepper sx={{ width: '100%' }} activeStep={currentStep - 1} alternativeLabel >
-                                    <Step>
-                                        <StepLabel sx={{}}>CONTACT DETAILS</StepLabel>
+                                    <Step 
+                                     sx={{
+                                        '& .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active ': {color:'#000000'},
+                                        '& .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed': {color:'#000000'},
+                                        '& .css-117w1su-MuiStepIcon-text':{
+                                            fontFamily: 'Poppins, sans-serif',
+                                        }
+                                    }}
+                                    >
+                                        <StepLabel 
+                                        sx={{
+                                            '& .css-1hv8oq8-MuiStepLabel-label.MuiStepLabel-alternativeLabel':{
+                                                fontSize:'12px',
+                                                fontFamily: 'Poppins, sans-serif',
+                                                fontWeight:'bold'
+                                            }
+
+                                        }}
+                                        >
+                                            CONTACT DETAILS</StepLabel>
                                     </Step>
-                                    <Step>
-                                        <StepLabel>SELECT DATE & TIME</StepLabel>
+                                    <Step
+                                      sx={{
+                                        '& .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active ': {color:'#000000'},
+                                        '& .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed': {color:'#000000'},
+                                        '& .css-117w1su-MuiStepIcon-text':{
+                                            fontFamily: 'Poppins, sans-serif',
+                                        }
+                                    }}
+                                    >
+                                        <StepLabel
+                                        sx={{
+                                            '& .css-1hv8oq8-MuiStepLabel-label.MuiStepLabel-alternativeLabel':{
+                                                fontSize:'12px',
+                                                fontFamily: 'Poppins, sans-serif',
+                                                fontWeight:'bold'
+                                            }
+
+                                        }}>SELECT DATE & TIME</StepLabel>
                                     </Step>
-                                    <Step>
-                                        <StepLabel>SERVICE DETAILS</StepLabel>
+                                    <Step
+                                      sx={{
+                                        '& .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active ': {color:'#000000'},
+                                        '& .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed': {color:'#000000'},
+                                        '& .css-117w1su-MuiStepIcon-text':{
+                                            fontFamily: 'Poppins, sans-serif',
+                                        }
+                                    }}
+                                   >
+                                        <StepLabel  sx={{
+                                        '& .css-1hv8oq8-MuiStepLabel-label.MuiStepLabel-alternativeLabel':{
+                                            fontSize:'12px',
+                                            fontFamily: 'Poppins, sans-serif',
+                                            fontWeight:'bold'
+                                        }
+
+                                    }}>SERVICE DETAILS</StepLabel>
                                     </Step>
                                 </Stepper>
                             </div>

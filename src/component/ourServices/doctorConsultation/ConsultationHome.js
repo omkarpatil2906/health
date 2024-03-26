@@ -4,7 +4,7 @@ import HomeVisit from '../HomeVisit'
 function ConsultationHome() {
   return (
     <div style={{
-      backgroundImage: 'url(https://media.istockphoto.com/id/1283195930/photo/portrait-of-doctor-standing-at-hospital.jpg?s=2048x2048&w=is&k=20&c=6pzkGEV_ovmxOOXS_y-rSpbuN-kdFc6kOj7bCiv67aU=)',
+      backgroundImage: 'url(https://www.portea.com/static/86d34fbc8306b7f62dae2b08aa754e4f/1abfa/banner-img-doctor.jpg)',
       backgroundRepeat: 'no-repeat',
       width: '100%',
       backgroundSize: 'cover',

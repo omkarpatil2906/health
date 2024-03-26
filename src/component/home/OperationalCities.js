@@ -4,9 +4,11 @@ function OperationalCities() {
   return (
     <div className='flex justify-center items-center w-full mt-12'>
       <div className='flex flex-col lg:flex-row-reverse justify-center items-center w-[80%]'>
-        <div className='w-full'>
-            <h1 className='text-center font-bold font-Montserrat text-xl'>We Are Operational In 40+ Cities</h1>
-            <p className='text-center font-poppins'>Explore the footprint map of Portea's presence in India.. With a nation-wide footprint, covering 40+ cities in India, Portea Medical continues to aspire to deliver our quality medical care to more customers and support them locally.</p>
+        <div className='w-full space-y-4'>
+            <h1 className='text-center font-bold font-Montserrat text-xl xl:text-3xl'>We Are Operational In 40+ Cities</h1>
+            <p className='text-center font-poppins text-xl 
+            
+            '>Explore the footprint map of Portea's presence in India.. With a nation-wide footprint, covering 40+ cities in India, Portea Medical continues to aspire to deliver our quality medical care to more customers and support them locally.</p>
         </div>
 
         <div className='w-full'>

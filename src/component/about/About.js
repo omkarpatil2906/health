@@ -2,10 +2,21 @@ import React from 'react'
 import { PiCheckBold } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import ManagementTeam from './ManagementTeam';
+import { motion } from 'framer-motion'
 
 function About() {
     return (
-        <div className='flex flex-col justify-center items-center w-full'>
+        <motion.div
+            variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 }
+
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className='flex flex-col justify-center items-center w-full'
+        >
 
             <div style={{
                 backgroundImage: 'url(https://www.portea.com/static/newbanner-88b8798f5819e1eb0c95f279b1ee57c3.png)',
@@ -61,7 +72,7 @@ function About() {
                 <div className='bg-white space-y-3 w-full shadow-xl lg:h-72 p-5 py-12'>
                     <PiCheckBold className='bg-[#009ba0] text-4xl p-2 text-white rounded-full' />
                     <h1 className='font-bold font-poppins'>Our Vision</h1>
-                    <p  className='font-Montserrat text-sm'>Portea Medical aims to deliver quality ‘out-of-hospital’ medical care, which is affordable and easily accessible to patients, thus improving the quality of life of patients and families.</p>
+                    <p className='font-Montserrat text-sm'>Portea Medical aims to deliver quality ‘out-of-hospital’ medical care, which is affordable and easily accessible to patients, thus improving the quality of life of patients and families.</p>
 
                 </div>
 
@@ -75,9 +86,9 @@ function About() {
             </div>
 
 
-            <ManagementTeam/>
+            <ManagementTeam />
 
-        </div>
+        </motion.div>
     )
 }
 

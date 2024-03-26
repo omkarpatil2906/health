@@ -2,10 +2,19 @@ import React from 'react'
 import ConsultationHome from './ConsultationHome'
 import { Link } from 'react-router-dom'
 import DoctorHomeService from './DoctorHomeService'
+import PorteaService from '../PorteaService'
+import { motion } from 'framer-motion'
 
 function DoctorConsultation() {
   return (
-    <div>
+    <motion.div  variants={{
+      hidden:{opacity:0, y:75},
+      visible:{opacity:1, y:0}
+
+    }}
+    initial="hidden"
+    animate="visible"
+    transition={{duration:0.5, delay:0.25}}>
 
             <ConsultationHome/>
 
@@ -17,10 +26,17 @@ function DoctorConsultation() {
 
                 </ul>
             </div>
-
+            <div className='lg:flex lg:p-12'>
+                <div className='lg:w-[70%]'>
         <DoctorHomeService/>
+                </div>
+                <div className='lg:w-[30%]'>
 
-        </div>
+                    <PorteaService />
+                </div>
+            </div>
+
+        </motion.div>
   )
 }
 

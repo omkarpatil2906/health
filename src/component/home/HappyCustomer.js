@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
@@ -9,7 +9,7 @@ function HappyCustomer() {
             id: 1,
             img: 'https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/woman-user-circle-icon.png',
             name: 'Shama Sunder',
-            massage: 'Counsellor Mary Fathima’s explanation is excellent and the information shared is very useful, as most people do not know the test procedure (i.e. test timings and the difference) of the FBS, PPBS and RBS tests even though they are literate. I was also doing my FBS test at incorrect timings and didn’t know the difference between PPBS and RBS.” The inputs shared were very useful in helping me manage by diabetes better. '
+            massage: 'Counsellor Mary Fathimas explanation is excellent and the information shared is very useful, as most people do not know the test procedure (i.e. test timings and the difference) of the FBS, PPBS and RBS tests even though they are literate. I was also doing my FBS test at incorrect timings and didnt know the difference between PPBS and RBS  The inputs shared were very useful in helping me manage by diabetes better. '
         },
         {
             id: 2,
@@ -39,8 +39,8 @@ function HappyCustomer() {
             id: 6,
             img: 'https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/woman-user-circle-icon.png',
             name: 'Sucheta Govil',
-            massage: 'My husband and I used to worry a lot, especially as we lived abroad, about my father in law who lived in Delhi and was suffering from Alzheimer’s which also put tremendous pressure on my mother in law as the primary carer. Portea, Meena, Yogesh and the team stepped in to provide invaluable day and night care. The attendants Ram and Akash were extrenely loving and caring and this made the situation so bearable. If anyone requires Portea’s help for elder care, I would highly recommend them and am extremely grateful to the entire team. '
-        },
+            massage: 'My husband and I used to worry a lot, especially as we lived abroad, about my father in law who lived in Delhi and was suffering from Alzheimers which also put tremendous pressure on my mother in law as the primary carer. Portea, Meena, Yogesh and the team stepped in to provide invaluable day and night care. The attendants Ram and Akash were extrenely loving and caring and this made the situation so bearable. If anyone requires Porteas help for elder care, I would highly recommend them and am extremely grateful to the entire team. '
+        }
 
     ]
 
@@ -50,6 +50,8 @@ function HappyCustomer() {
 
     };
 
+    const [currentIndex, setCurrentIndex] = useState(0); 
+
     const items = obj.map(item => (
         <div key={item.id} className='flex flex-col justify-center m-2 items-center py-12 space-y-6 lg:h-96 bg-[#f8fbfd]'>
             <img src={item.img} className='h-12' alt='' />
@@ -58,12 +60,24 @@ function HappyCustomer() {
         </div>
     ));
 
+    const handlePrevious = ({ isPrevious }) => {
+        if (isPrevious) {
+            setCurrentIndex(prevIndex => prevIndex - 1);
+        }
+    };
+
+    const handleNext = ({ isNext }) => {
+        if (isNext) {
+            setCurrentIndex(prevIndex => prevIndex + 1);
+        }
+    };
+
     return (
         <div className='flex flex-col justify-center items-center w-full'>
-            <div className='text-center py-12'>
-                <h1 className='font-bold font-Montserrat text-2xl'>Happy Customer</h1>
+            <div className='text-center py-12 space-y-2'>
+                <h1 className='font-bold font-Montserrat text-3xl'>Happy Customer</h1>
                 <p className='font-poppins'>
-                    Don’t simply consider our word for it, hear it from our happy customers what they have to say about their
+                    Don't simply consider our word for it, hear it from our happy customers what they have to say about their
                     experience with Portea.
                 </p>
             </div>
@@ -78,16 +92,20 @@ function HappyCustomer() {
                     renderPrevButton={({ previous }) => (
                         <div className='flex justify-end'>
                             <MdKeyboardArrowLeft
-                                className={`text-4xl bg-black text-white rounded-full`}
-                                onClick={previous}
+                                className={`text-4xl ${
+                                    currentIndex === 0 ? 'text-gray-400 ' : 'bg-black text-white rounded-full cursor-pointer'
+                                }`}
+                                onClick={() => currentIndex !== 0 && handlePrevious({ isPrevious: true })}
                             />
                         </div>
                     )}
                     renderNextButton={({ next }) => (
                         <div className='flex justify-start'>
                             <MdKeyboardArrowRight
-                                className={`text-4xl bg-black text-white rounded-full`}
-                                onClick={next}
+                                className={`text-4xl ${
+                                    currentIndex === obj.length - 1 ? 'text-gray-400 ' : 'bg-black text-white rounded-full cursor-pointer'
+                                }`}
+                                onClick={() => currentIndex !== obj.length - 1 && handleNext({ isNext: true })}
                             />
                         </div>
                     )}

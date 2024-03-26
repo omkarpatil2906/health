@@ -39,8 +39,8 @@ function CarePlan() {
                     {
                         dataObj.map((item) => (
                             <tr key={item.id}>
-                                <td className='bg-[#a3e4db] border p-1'> {item.plan} </td>
-                                <td className='bg-[#c0fefc] border p-1'> $ {item.price}</td>
+                                <td className='bg-[#a3e4db] border p-2'> {item.plan} </td>
+                                <td className='bg-[#c0fefc] border p-2'> $ {item.price}</td>
                             </tr>
                         ))
                     }

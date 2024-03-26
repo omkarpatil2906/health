@@ -2,10 +2,20 @@ import React from 'react'
 import HomeNursing from './HomeNursing'
 import { Link } from 'react-router-dom'
 import NursingWorks from './NursingWorks'
-
+import PorteaService from '../PorteaService'
+import { motion } from 'framer-motion'
 function Nursing() {
     return (
-        <div>
+        <motion.div
+        variants={{
+            hidden:{opacity:0, y:75},
+            visible:{opacity:1, y:0}
+      
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{duration:0.5, delay:0.25}}
+          >
 
             <HomeNursing />
 
@@ -18,9 +28,16 @@ function Nursing() {
                 </ul>
             </div>
 
-            <NursingWorks/>
+            <div className='lg:flex lg:p-12'>
+                <div className='lg:w-[70%]'>
+                    <NursingWorks />
+                </div>
+                <div className='lg:w-[30%]'>
+                    <PorteaService />
+                </div>
+            </div>
 
-        </div>
+        </motion.div>
     )
 }
 

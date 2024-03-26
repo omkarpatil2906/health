@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import BookNow from '../book/BookNow';
 
 function MedicalService() {
     const [showAll, setShowAll] = useState(false);
@@ -95,7 +96,7 @@ function MedicalService() {
                         <div key={item.id} className='border grid grid-cols-2 justify-between items-center shadow-lg bg-white rounded-lg xl:w-[90%] xl:h-52'>
                             <div className='w-[100%] space-y-7 pl-5 font-bold'>
                                 <h1 className='text-2xl xl:text-xl font-poppins'>{item.titile}</h1>
-                                <button className='text-xl lg:text-lg text-orange-600 font-Montserrat'>Book Now</button>
+                                <button className='text-xl lg:text-lg text-orange-600 font-Montserrat'><BookNow/></button>
                             </div>
                             <div className='w-[100%] flex justify-end items-end h-full '>
                                 <img src={item.Image} className='h-44 object-cover' alt='' />
@@ -105,7 +106,7 @@ function MedicalService() {
                 </div>
 
                 <div className='flex justify-center mt-5 py-12'>
-                    <button onClick={toggleShowAll} className='bg-white text-orange-500 text-xl font-Montserrat font-bold py-2 px-4  flex items-center rounded-lg'>
+                    <button onClick={toggleShowAll} className='bg-white text-orange-500 text-xl font-Montserrat font-bold py-2 px-4  gap-4  flex items-center rounded-lg'>
                         {showAll ? <> View Less <FaChevronUp className='m-2' /> </> : <>View More<FaChevronDown className='mr-2' /> </>}
                     </button>
                 </div>

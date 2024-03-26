@@ -1,10 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CounsellingHome from './CounsellingHome'
+import { motion } from 'framer-motion'
 
 function Counselling() {
   return (
-    <div>
+    <motion.div  variants={{
+      hidden:{opacity:0, y:75},
+      visible:{opacity:1, y:0}
+
+    }}
+    initial="hidden"
+    animate="visible"
+    transition={{duration:0.5, delay:0.25}}>
 
             <CounsellingHome/>
 
@@ -19,7 +27,7 @@ function Counselling() {
 
 
 
-        </div>
+        </motion.div>
   )
 }
 

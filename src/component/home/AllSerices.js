@@ -11,7 +11,7 @@ function AllServices() {
                 <div className='grid gap-4 grid-cols-2 lg:grid-cols-7 justify-items-center w-[100%] font-poppins text-sm'>
                     {cities.map((city, index) => (
 
-                        <h1 className='w-[80%] text-center text-white py-3 px-6 bg-[#415169] rounded-lg' key={index}>{city}</h1>
+                        <h1 className='w-[80%] text-center text-white  py-3 px-6 bg-[#415169] rounded-ss-3xl rounded-ee-3xl shadow-md' key={index}>{city}</h1>
 
                     ))}
                 </div>

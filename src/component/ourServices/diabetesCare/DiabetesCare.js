@@ -1,10 +1,20 @@
 import React from 'react'
 import DiabetesHome from './DiabetesHome'
 import { Link } from 'react-router-dom'
+import DiabetesPlan from './DiabetesPlan'
+import PorteaService from '../PorteaService'
+import { motion } from 'framer-motion'
 
 function DiabetesCare() {
   return (
-    <div>
+    <motion.div  variants={{
+      hidden:{opacity:0, y:75},
+      visible:{opacity:1, y:0}
+
+    }}
+    initial="hidden"
+    animate="visible"
+    transition={{duration:0.5, delay:0.25}}>
 
             <DiabetesHome/>
 
@@ -17,8 +27,18 @@ function DiabetesCare() {
                 </ul>
             </div>
 
+            <div className='lg:flex lg:p-12'>
+                <div className='lg:w-[70%]'>
+         <DiabetesPlan/>
 
-        </div>
+                </div>
+                <div className='lg:w-[30%]'>
+
+                    <PorteaService />
+                </div>
+            </div>
+
+        </motion.div>
   )
 }
 

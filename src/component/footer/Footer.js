@@ -10,16 +10,16 @@ function Footer() {
     <div className='bg-[#252835]'>
 
       <div className='grid lg:grid-cols-2 xl:grid-cols-4 py-12 xl:p-12'>
-      <About/>
-      <OurServices/>
-      <PopularServices/>
-      <ContactUs/>
+        <About />
+        <OurServices />
+        <PopularServices />
+        <ContactUs />
       </div>
-   
-   <div className='xl:px-12'>
 
-      <ContactInstruction/>
-   </div>
+      <div className='xl:px-12'>
+
+        <ContactInstruction />
+      </div>
     </div>
   )
 }

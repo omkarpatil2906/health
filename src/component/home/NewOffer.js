@@ -1,4 +1,5 @@
 import React from 'react'
+import Carousel from 'react-grid-carousel'
 
 function NewOffer() {
     const obj = [
@@ -54,6 +55,9 @@ function NewOffer() {
             massage: 'Patient Served Successfully'
         },
     ]
+
+
+
     return (
         <div className='flex flex-col items-center justify-center mt-12'>
 
@@ -61,7 +65,7 @@ function NewOffer() {
             <div className='lg:w-[80%]'>
                 <h1 className='text-center font-Montserrat font-bold text-3xl py-12'>New Offer</h1>
 
-                <div className='grid gap-2 p-2 lg:grid-cols-3 '>
+                <div className=' gap-2 p-2 lg:grid-cols-3 hidden sm:grid'>
                     {
                         obj.map((item, i) => (
                             <div key={i} className='flex justify-between border shadow-md rounded-lg' style={{ background: ['#CDF0EA', '#CDF0EA', '#FEEAEA'][i] }}>
@@ -87,6 +91,33 @@ function NewOffer() {
 
                 </div>
             </div>
+
+            <div className='w-full sm:hidden'>
+                <Carousel cols={1} rows={1} mobileBreakpoint={300}>
+                    {obj.map((item, i) => (
+                        <Carousel.Item key={i}>
+                            <div className='flex justify-between border shadow-md rounded-lg' style={{ background: ['#CDF0EA', '#CDF0EA', '#FEEAEA'][i] }}>
+                                <div className='py-6 p-4 xl:px-9 space-y-3 w-[70%]'>
+                                    <button className='rounded-lg font-poppins text-xs p-1 px-3' style={{ background: ['#15D3BD', '#c490e4', 'orange'][i] }}>{item.dics}</button>
+                                    <h1 className='font-Montserrat font-bold text-xl'>{item.title}</h1>
+                                    <div>
+                                        <h1 className='text-sm font-poppins font-semibold'>{item.disc2}</h1>
+                                        <p className='text-sm font-poppins font-light'> {item.massage} </p>
+                                    </div>
+                                    <div>
+                                        <button className='bg-orange-500 text-xs p-1 font-Montserrat px-4 text-white rounded-lg'>Book Now</button>
+                                        <p className='ml-1 text-[8px] font-poppins'>T & C Apply</p>
+                                    </div>
+                                </div>
+                                <div className='w-[30%] flex justify-end items-end h-full'>
+                                    <img src={item.img} className='h-44' alt="" />
+                                </div>
+                            </div>
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
+            </div>
+
 
 
             <div className='bg-[#f5fbfb]  flex flex-col justify-center items-center p-12 font mt-12 w-full'>

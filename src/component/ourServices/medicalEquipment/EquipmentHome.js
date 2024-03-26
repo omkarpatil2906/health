@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeDetails from './HomeDetails'
 
 function EquipmentHome() {
     const equObj = [
@@ -34,9 +35,9 @@ function EquipmentHome() {
         },
     ]
     return (
-        <div className='xl:flex'>
+        <div>
 
-            <div className='grid p-5 sm:grid-cols-3 gap-3 xl:w-[70%]' >
+            <div className='grid p-5 sm:grid-cols-3 gap-3 ' >
                 {equObj.map((item) => (
                     <div key={item.id} className='bg-white p-1 shadow-md'>
                         <img src={item.img} alt="" />
@@ -45,26 +46,7 @@ function EquipmentHome() {
                     </div>
                 ))}
             </div>
-
-
-            <div className='bg-[#effffd] p-5 space-y-5 scroll-py-5 m-3 xl:w-[30%]'>
-                <h1 className='text-xl font-bold font-Montserrat'>Portea Services</h1>
-
-                <hr className='border-[#009aa0]  border-2' />
-                <ul className='space-y-5 font-poppins'>
-                    <li>Doctor Consultation</li> <hr />
-                    <li>Nursing</li> <hr />
-                    <li>Physiotherapy</li><hr />
-                    <li>Trained Attendant</li><hr />
-                    <li>Elder Care</li><hr />
-                    <li>Mother & Baby Care</li><hr />
-                    <li>Lab Tests</li><hr />
-                    <li>Medical Equipment</li><hr />
-                    <li>Speciality Pharma</li><hr />
-                    <li>Critical Care</li>
-                </ul>
-            </div>
-
+                    <HomeDetails/>
         </div>
     )
 }
