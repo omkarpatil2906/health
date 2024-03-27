@@ -2,6 +2,7 @@ import React from 'react'
 import CriticalHome from './CriticalHome'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import CriticalInterest from './CriticalInterest'
 
 function CriticalCare() {
   return (
@@ -24,7 +25,7 @@ function CriticalCare() {
 
         </ul>
     </div>
-
+    <CriticalInterest/>
 
 </motion.div>
   )

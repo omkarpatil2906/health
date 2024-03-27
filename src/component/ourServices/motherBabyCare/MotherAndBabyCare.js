@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import CareService from './CareService'
 import PorteaService from '../PorteaService'
 import { motion } from 'framer-motion'
+import MotherBabyCareTable from './MotherBabyCareTable'
 
 function MotherAndBabyCare() {
   return (
@@ -16,7 +17,7 @@ function MotherAndBabyCare() {
       initial="hidden"
       animate="visible"
       transition={{ duration: 0.5, delay: 0.25 }}
-      >
+    >
 
       <MotherBabyCareHome />
 
@@ -33,7 +34,7 @@ function MotherAndBabyCare() {
           <CareService />
         </div>
         <div className='lg:w-[30%]'>
-
+          <MotherBabyCareTable />
           <PorteaService />
         </div>
       </div>

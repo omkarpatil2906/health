@@ -2,6 +2,7 @@ import React from 'react'
 import physioInfoDesktop from './asset/physioInfoDesktop.png'
 import physioInfoMobile from './asset/physioInfoMobile.png'
 import PorteaService from '../PorteaService'
+import PhysiotherapyTable from './PhysiotherapyTable'
 
 
 function Workss() {
@@ -32,7 +33,7 @@ function Workss() {
 
                             <h1 className='border-s-4 border-orange-500 px-2 text-xl font-bold font-Montserrat'> What Is Physiotherapy?</h1>
 
-                            <p className='font-poppins'>
+                            <p className='font-poppins text-justify text-[#616f6f]'>
                                 Physiotherapy, also referred to as physical therapy, is an allied health profession that makes use of bio-mechanics or kinesiology, manual therapy, exercise therapy, and electrotherapy, to help patients restore, maintain and increase their physical mobility, strength, and function. <br /> <br />
 
                                 Physiotherapists are better able to help patients regain mobility, as they have a better understanding of how the body works and are trained in clinical skills to assess, diagnose and treat disabilities. Physiotherapists can help patients recover from injuries and disabilities ranging from back pain, neck pain, knee pain to ligament issues. <br /> <br />
@@ -41,13 +42,13 @@ function Workss() {
                             </p>
                         </div>
 
-                        <div className='space-y-2'>
+                        <div className='space-y-4'>
                             <h1 className='border-s-4 border-orange-500 px-2 text-xl font-bold font-Montserrat'> What Are The Important Benefits Of Physiotherapy Services At Home?</h1>
 
-                            <p className='font-poppins'>
+                            <p className='font-poppins text-justify text-[#616f6f]'>
                                 Physiotherapy has consistently demonstrated its efficacy in aiding patients to recover their health, and improve their physical strength, functionality, and mobility. To elevate your physiotherapy experience, we offer personalized sessions by having our expert physiotherapists visit you for physiotherapy at home. Here are the key benefits of opting for a physiotherapist at home: </p>
 
-                            <ol className='font-poppins'>
+                            <ol className='font-poppins text-[#616f6f] space-y-2 text-justify'>
                                 <li> <span className='font-bold'>1. Convenience:</span>  Receive professional care without leaving your home, making it easier to integrate therapy into your daily routine.</li>
                                 <li><span className='font-bold'>2. Personalized Care:</span>  Tailored treatment plans that address your specific rehabilitation needs, enhancing the effectiveness of each session.</li>
                                 <li> <span className='font-bold'>3. Faster Healing Process:</span>  The comfort and familiarity of your home environment can facilitate a quicker recovery.</li>
@@ -56,7 +57,7 @@ function Workss() {
                                 <li> <span className='font-bold'>6. Cost-Effective:</span>  Save on travel expenses and receive affordable treatment plans without compromising on quality.</li>
                                 <li> <span className='font-bold'>7. Family Support and Supervision:</span>  Having your family around during sessions can provide emotional support and ensure you’re performing exercises correctly under their supervision.</li>
                             </ol>
-                            <p className='font-poppins'>
+                            <p className='font-poppins text-[#616f6f] text-justify'>
 
                                 Our affordable and reliable home services are designed to eliminate the stress and inconvenience typically associated with traditional physiotherapy treatment. Say goodbye to the challenges of receiving effective therapy; with our at-home services, we bring the path to recovery directly to you.
                             </p>
@@ -67,7 +68,7 @@ function Workss() {
                         <div className='space-y-2'>
                             <h1 className='border-s-4 border-orange-500 px-2 text-xl font-bold font-Montserrat'> When Do You Need A Physiotherapist From Us?</h1>
 
-                            <p className='font-poppins'>
+                            <p className='font-poppins text-[#616f6f] text-justify'>
                                 Call it the bane of the modern lifestyle but knee pain, back pain, and neck strain have become a part and parcel of life. When a certain type of pain does not subdue over a period of time and you experience it after doing a particular movement, then it is better to see a physiotherapist or get the service of a physiotherapist at home. You can also benefit from our home physiotherapy service for a convenient treatment.
                             </p>
                         </div>
@@ -75,6 +76,7 @@ function Workss() {
                     </div>
 
                     <div className='lg:w-[30%]'>
+                        <PhysiotherapyTable/>
                         <PorteaService />
                     </div>
 

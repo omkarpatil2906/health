@@ -136,7 +136,8 @@ function Navbar() {
     setServicesAnchorEl(event.currentTarget);
   }
 
-  function handleServicesClose() {
+  function handleServicesClose(event, path) {
+  
     setServicesAnchorEl(null);
   }
 
@@ -207,21 +208,21 @@ function Navbar() {
         <ul className='hidden lg:flex justify-between items-center p-4 font-semibold '>
           <li className='w-[40%]'>
             <Link to="/">
-            <img src="https://www.portea.com/static/logo-bdce0308d6dac6258f5f9c30993083ac.svg" className='h-10 mx-auto' alt="" />
+            <img src="https://www.portea.com/static/logo-bdce0308d6dac6258f5f9c30993083ac.svg" className='h-12' alt="" />
             </Link>
            
           </li>
 
           <div className='w-[70%] justify-between items-center hidden lg:flex'>
-            <li className=' cursor-pointer'>
-              <h1 onClick={handleServicesClick}   className='flex items-center hover:text-[#00979e] gap-2'> Our Services <span><IoIosArrowDown  className='text-[#00979e] text-xl'/></span></h1>
+            <li className=''>
+              <h1 onClick={handleServicesClick}   className='flex items-center cursor-pointer hover:text-[#00979e] gap-2'> Our Services <span><IoIosArrowDown  className='text-[#00979e] text-xl'/></span></h1>
               <Menu
                 id="services-menu"
                 anchorEl={servicesAnchorEl}
                 open={Boolean(servicesAnchorEl)}
                 onClose={handleServicesClose}
                 onMouseLeave={handleServicesClose}
-                className='mt-5 w-[70%]'
+                className='mt-2 w-[70%]'
               >
 
                 <div className='grid grid-cols-2 gap-2 '>

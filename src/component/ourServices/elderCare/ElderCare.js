@@ -4,17 +4,18 @@ import { Link } from 'react-router-dom'
 import CarePlan from './CarePlan'
 import PorteaService from '../PorteaService'
 import { motion } from 'framer-motion'
+import ElderCareTable from './ElderCareTable'
 
 function ElderCare() {
     return (
-        <motion.div  variants={{
-            hidden:{opacity:0, y:75},
-            visible:{opacity:1, y:0}
-      
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{duration:0.5, delay:0.25}}>
+        <motion.div variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 }
+
+        }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.25 }}>
 
             <ElderCareHome />
 
@@ -28,10 +29,10 @@ function ElderCare() {
 
             <div className='lg:flex lg:p-12'>
                 <div className='lg:w-[70%]'>
-            <CarePlan />
+                    <CarePlan />
                 </div>
                 <div className='lg:w-[30%]'>
-
+                    <ElderCareTable />
                     <PorteaService />
                 </div>
             </div>

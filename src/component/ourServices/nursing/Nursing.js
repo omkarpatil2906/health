@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import NursingWorks from './NursingWorks'
 import PorteaService from '../PorteaService'
 import { motion } from 'framer-motion'
+import NursingTable from './NursingTable'
 function Nursing() {
     return (
         <motion.div
@@ -33,6 +34,7 @@ function Nursing() {
                     <NursingWorks />
                 </div>
                 <div className='lg:w-[30%]'>
+                    <NursingTable/>
                     <PorteaService />
                 </div>
             </div>

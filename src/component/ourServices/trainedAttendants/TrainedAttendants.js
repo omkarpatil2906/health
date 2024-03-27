@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import TrainedService from './TrainedService'
 import PorteaService from '../PorteaService'
 import { motion } from 'framer-motion'
+import TrainedTable from './TrainedTable'
 
 function TrainedAttendants() {
   return (
@@ -31,6 +32,7 @@ function TrainedAttendants() {
           <TrainedService />
         </div>
         <div className='lg:w-[30%]'>
+          <TrainedTable/>
           <PorteaService />
         </div>
       </div>

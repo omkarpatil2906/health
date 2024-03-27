@@ -4,6 +4,7 @@ import LabTestHome from './LabTestHome'
 import CheckupPackage from './CheckupPackage'
 import PorteaService from '../PorteaService'
 import { motion } from 'framer-motion'
+import LabTestTable from './LabTestTable'
 
 function LabTest() {
   return (
@@ -30,6 +31,7 @@ function LabTest() {
           <CheckupPackage />
         </div>
         <div className='lg:w-[30%]'>
+          <LabTestTable/>
           <PorteaService />
         </div>
       </div>
