@@ -39,10 +39,13 @@ function EquipmentHome() {
 
             <div className='grid p-5 sm:grid-cols-3 gap-3 ' >
                 {equObj.map((item) => (
-                    <div key={item.id} className='bg-white p-1 shadow-md'>
-                        <img src={item.img} alt="" />
+                    <div key={item.id} className='bg-white p-1 shadow-md rounded-t-3xl overflow-hidden'>
+                        <img src={item.img} className='rounded-t-3xl' alt="" />
+                        <div className='py-4'>
                         <h1 className='font-poppins text-sm p-2'>{item.name}</h1>
-                        <button className='mx-2  px-4 p-1 text-white font-Montserrat rounded-md text-sm bg-orange-500 '>VIEW</button>
+                        <button className='mx-2  px-4 p-1 text-white font-poppins text-xs rounded-md  bg-orange-500 '>VIEW</button>
+
+                        </div>
                     </div>
                 ))}
             </div>

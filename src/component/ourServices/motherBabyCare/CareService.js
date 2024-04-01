@@ -31,18 +31,18 @@ function CareService() {
 
 
         <h1 className='border-s-4 border-orange-500 px-2 text-xl font-bold font-Montserrat'>Tips For New Mom At Home</h1>
-        <p className='font-poppins'>Becoming a mother is a great feeling. However, after giving birth to a baby, the new mothers might experience several emotions at a time. Especially when becoming a mother for the very first time, things are more challenging. Mothers may feel tired and go through several challenges. To make the journey of motherhood smooth and less stressful, here are some effective tips for moms.</p> <br />
+        <p className='font-poppins text-[#616f6f]'>Becoming a mother is a great feeling. However, after giving birth to a baby, the new mothers might experience several emotions at a time. Especially when becoming a mother for the very first time, things are more challenging. Mothers may feel tired and go through several challenges. To make the journey of motherhood smooth and less stressful, here are some effective tips for moms.</p> <br />
 
         <ul className='list-disc px-3 list-inside marker:text-[#616f6f] space-y-4 font-poppins text-[#616f6f]'>
 
-        <li><span className='font-bold'>Prepare a complete checklist</span>  – Get a checklist ready and list down all the items required for nursing and proper baby care.</li>
-        <li><span className='font-bold'>Handle the newborn with care </span>– Newborn babies are delicate. So, holding them with utmost care is vital. Make sure to support the head of the baby to prevent your child from experiencing any kind of discomfort.</li>
-        <li><span className='font-bold'>Select the baby products wisely</span>– Babies have sensitive skin that is easily prone to irritation and rashes. So, ensure that you are getting genuine skin care products that are free from harsh cleansing agents, strong fragrances, and artificial additives. Consult healthcare professionals to get information about the best brands for childcare products.</li>
-        <li><span className='font-bold'>Breastfeed Your Baby</span>– Breastfeed your newborn for at least three months. Make sure to feed your baby at regular intervals throughout the day.</li>
-        <li><span className='font-bold'>Trim the Nails</span>– The skin of babies is delicate. So, if they have long nails, there is a chance that they might end up hurting themselves. Trimming the nails of the babies regularly prevents any scratches due to long nails.</li>
-        <li><span className='font-bold'>Choose Comfortable Clothes</span>Choose stretchable, soft, and easy-to-wear clothes for your child to ensure optimum comfort.</li>
-        <li><span className='font-bold'>Know the Basics of Baby Cleaning</span>– You can expect your baby to poop or pee at least 8 to 10 times a day. So, make sure to regularly check and change the dirty diaper of the baby to avoid any infections.</li>
-        <li><span className='font-bold'>Bond with the Baby</span>– Try to develop a bond with the baby through eye contact, skin-to-skin contact, and meeting the needs of the baby. </li>
+          <li><span className='font-bold'>Prepare a complete checklist</span>  – Get a checklist ready and list down all the items required for nursing and proper baby care.</li>
+          <li><span className='font-bold'>Handle the newborn with care </span>– Newborn babies are delicate. So, holding them with utmost care is vital. Make sure to support the head of the baby to prevent your child from experiencing any kind of discomfort.</li>
+          <li><span className='font-bold'>Select the baby products wisely</span>– Babies have sensitive skin that is easily prone to irritation and rashes. So, ensure that you are getting genuine skin care products that are free from harsh cleansing agents, strong fragrances, and artificial additives. Consult healthcare professionals to get information about the best brands for childcare products.</li>
+          <li><span className='font-bold'>Breastfeed Your Baby</span>– Breastfeed your newborn for at least three months. Make sure to feed your baby at regular intervals throughout the day.</li>
+          <li><span className='font-bold'>Trim the Nails</span>– The skin of babies is delicate. So, if they have long nails, there is a chance that they might end up hurting themselves. Trimming the nails of the babies regularly prevents any scratches due to long nails.</li>
+          <li><span className='font-bold'>Choose Comfortable Clothes</span>Choose stretchable, soft, and easy-to-wear clothes for your child to ensure optimum comfort.</li>
+          <li><span className='font-bold'>Know the Basics of Baby Cleaning</span>– You can expect your baby to poop or pee at least 8 to 10 times a day. So, make sure to regularly check and change the dirty diaper of the baby to avoid any infections.</li>
+          <li><span className='font-bold'>Bond with the Baby</span>– Try to develop a bond with the baby through eye contact, skin-to-skin contact, and meeting the needs of the baby. </li>
         </ul>
 
 

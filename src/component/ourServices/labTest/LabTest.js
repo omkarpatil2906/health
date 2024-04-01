@@ -3,19 +3,11 @@ import { Link } from 'react-router-dom'
 import LabTestHome from './LabTestHome'
 import CheckupPackage from './CheckupPackage'
 import PorteaService from '../PorteaService'
-import { motion } from 'framer-motion'
 import LabTestTable from './LabTestTable'
 
 function LabTest() {
   return (
-    <motion.div  variants={{
-      hidden:{opacity:0, y:75},
-      visible:{opacity:1, y:0}
-
-    }}
-    initial="hidden"
-    animate="visible"
-    transition={{duration:0.5, delay:0.25}}>
+    <div >
       <LabTestHome />
       <div className='bg-[#fafafa] text-sm font-Montserrat'>
         <ul className='flex space-x-2 p-4'>
@@ -36,7 +28,7 @@ function LabTest() {
         </div>
       </div>
 
-    </motion.div>
+    </div>
   )
 }
 

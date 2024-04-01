@@ -3,19 +3,11 @@ import ConsultationHome from './ConsultationHome'
 import { Link } from 'react-router-dom'
 import DoctorHomeService from './DoctorHomeService'
 import PorteaService from '../PorteaService'
-import { motion } from 'framer-motion'
 import DoctorConsultationTable from './DoctorConsultationTable'
 
 function DoctorConsultation() {
   return (
-    <motion.div variants={{
-      hidden: { opacity: 0, y: 75 },
-      visible: { opacity: 1, y: 0 }
-
-    }}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 0.5, delay: 0.25 }}>
+    <div>
 
       <ConsultationHome />
 
@@ -37,7 +29,7 @@ function DoctorConsultation() {
         </div>
       </div>
 
-    </motion.div>
+    </div>
   )
 }
 

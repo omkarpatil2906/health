@@ -3,9 +3,11 @@ import physioInfoDesktop from './asset/physioInfoDesktop.png'
 import physioInfoMobile from './asset/physioInfoMobile.png'
 import PorteaService from '../PorteaService'
 import PhysiotherapyTable from './PhysiotherapyTable'
+import AccordianTable from '../../AccordianTable'
 
 
 function Workss() {
+    const contentObj = ['What Is Physiotherapy?','What Are The Important Benefits Of Physiotherapy Services At Home?','When Do You Need A Physiotherapist From Us?','Range Of Physiotherapy Specialties Offered By Portea','Why Do Physiotherapy Exercises?','How To Prepare For A Physiotherapy Session At Home?' ]
     return (
         <div className='lg:px-12'>
 
@@ -21,17 +23,17 @@ function Workss() {
 
 
                 <div className='lg:flex'>
+
                     <div className='p-5 space-y-5 grid justify-center w-full lg:w-[70%]'>
+                    {/* <AccordianTable contentObj={contentObj} /> */}
                         <div className=' grid justify-center w-full'>
 
                             <img src="https://www.portea.com/static/c437a902977b8fe7fcabe8d41d4c6124/43fa5/physio.png" alt="" />
                         </div>
 
-
-
                         <div className='space-y-2'>
 
-                            <h1 className='border-s-4 border-orange-500 px-2 text-xl font-bold font-Montserrat'> What Is Physiotherapy?</h1>
+                            <h1 className='border-s-4 border-orange-500 px-2 text-xl font-bold font-Montserrat'  data-aos='f' data-aos-duration='1000'> What Is Physiotherapy?</h1>
 
                             <p className='font-poppins text-justify text-[#616f6f]'>
                                 Physiotherapy, also referred to as physical therapy, is an allied health profession that makes use of bio-mechanics or kinesiology, manual therapy, exercise therapy, and electrotherapy, to help patients restore, maintain and increase their physical mobility, strength, and function. <br /> <br />
@@ -72,9 +74,7 @@ function Workss() {
                                 Call it the bane of the modern lifestyle but knee pain, back pain, and neck strain have become a part and parcel of life. When a certain type of pain does not subdue over a period of time and you experience it after doing a particular movement, then it is better to see a physiotherapist or get the service of a physiotherapist at home. You can also benefit from our home physiotherapy service for a convenient treatment.
                             </p>
                         </div>
-
                     </div>
-
                     <div className='lg:w-[30%]'>
                         <PhysiotherapyTable/>
                         <PorteaService />

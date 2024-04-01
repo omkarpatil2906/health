@@ -75,6 +75,7 @@ function ContactDetails({ handleNext }) {
                     <Select
                         options={cityOptions}
                         placeholder='Service Need In?'
+                        menuPlacement='top'
                         styles={{
                             indicatorSeparator: () => null,
                             control: (provided, state) => ({
@@ -87,6 +88,12 @@ function ContactDetails({ handleNext }) {
                                 fontSize: '14px',
                                 fontFamily: 'Poppins, sans-serif',
                                 color: '#aaa',
+                            }),
+                            option: (provided, state) => ({
+                                ...provided,
+                                ":hover": {
+                                    backgroundColor: "rgb(200, 200, 200)",
+                                },
                             }),
                         }}
                     />

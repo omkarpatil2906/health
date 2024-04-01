@@ -6,7 +6,7 @@ function Home2() {
             <div className='flex flex-col items-center justify-center  sm:mt-24 md:m-0'>
 
                 <div className='flex flex-col lg:flex-row-reverse items-center justify-center h-[100%]'>
-                    <div className='px-5 flex justify-center lg:w-[100%]'>
+                    <div className='px-5 flex justify-center lg:w-[100%]' >
                         <img src="https://www.portea.com/static/7e2d9953dbabad6e0c533699ec00ddcb/2049f/hero.webp" className='' alt="" />
                     </div>
 

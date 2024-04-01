@@ -3,19 +3,11 @@ import ElderCareHome from './ElderCareHome'
 import { Link } from 'react-router-dom'
 import CarePlan from './CarePlan'
 import PorteaService from '../PorteaService'
-import { motion } from 'framer-motion'
 import ElderCareTable from './ElderCareTable'
 
 function ElderCare() {
     return (
-        <motion.div variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 }
-
-        }}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.5, delay: 0.25 }}>
+        <div>
 
             <ElderCareHome />
 
@@ -36,7 +28,7 @@ function ElderCare() {
                     <PorteaService />
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 

@@ -3,21 +3,12 @@ import MotherBabyCareHome from './MotherBabyCareHome'
 import { Link } from 'react-router-dom'
 import CareService from './CareService'
 import PorteaService from '../PorteaService'
-import { motion } from 'framer-motion'
+
 import MotherBabyCareTable from './MotherBabyCareTable'
 
 function MotherAndBabyCare() {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 75 },
-        visible: { opacity: 1, y: 0 }
-
-      }}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 0.5, delay: 0.25 }}
-    >
+    <div>
 
       <MotherBabyCareHome />
 
@@ -40,7 +31,7 @@ function MotherAndBabyCare() {
       </div>
 
 
-    </motion.div>
+    </div>
   )
 }
 

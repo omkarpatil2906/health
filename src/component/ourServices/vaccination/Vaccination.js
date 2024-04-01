@@ -1,21 +1,14 @@
 import React from 'react'
-import VaccinationHome from './VaccinationHome'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import VaccinationHome from './VaccinationHome'
+import AboutVaccination from './AboutVaccination'
+import PorteaService from '../PorteaService'
+import TableVaccination from './TableVaccination'
 
 function Vaccination() {
   return (
-    <motion.div  variants={{
-      hidden:{opacity:0, y:75},
-      visible:{opacity:1, y:0}
-
-    }}
-    initial="hidden"
-    animate="visible"
-    transition={{duration:0.5, delay:0.25}}>
-
+    <div>
             <VaccinationHome/>
-
             <div className='bg-[#fafafa] text-sm font-Montserrat'>
                 <ul className='flex space-x-2 p-4'>
                     <li className='font-bold  text-orange-500'> <Link to='/'> Home  &#62; </Link>  </li>
@@ -24,9 +17,16 @@ function Vaccination() {
                 </ul>
             </div>
 
-          
-
-        </motion.div>
+            <div className='lg:flex lg:p-12'>
+        <div className='lg:w-[70%]'>
+          <AboutVaccination/>
+        </div>
+        <div className='lg:w-[30%]'>
+          <TableVaccination />
+          <PorteaService/>
+        </div>
+      </div>
+        </div>
   )
 }
 

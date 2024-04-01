@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './component/navbar/Navbar'
 import Home from './component/home/Home'
 import { Route, Routes, useLocation } from 'react-router-dom'
@@ -22,17 +22,24 @@ import ContactUs from './component/contactus/ContactUs'
 import ScrollToTop from './component/ScrollToTop'
 import DoctorSpeak from './component/doctorSpeak/DoctorSpeak'
 import PressMedia from './component/pressMedia/PressMedia'
-import { AnimatePresence } from 'framer-motion'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
+
+  useEffect(() => {
+      AOS.init({
+      })
+  },[])
+  
+
   const location = useLocation();
   return (
     <div>
       <ScrollToTop />
 
       <Navbar />
-      <AnimatePresence>
+     
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home />} />
           <Route path='/physiotherapy' element={<Physiotherapy />} />
@@ -54,7 +61,7 @@ function App() {
           <Route path='/doctor_speak' element={<DoctorSpeak />} />
           <Route path='/press-media' element={<PressMedia />} />
         </Routes>
-      </AnimatePresence>
+    
       <Footer />
 
     </div>

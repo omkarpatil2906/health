@@ -7,6 +7,7 @@ function MedicalService() {
     const scrollRef = useRef(null);
 
 
+    
     const obj = [
         {
             id: 1,
@@ -72,7 +73,6 @@ function MedicalService() {
 
     const visibleItems = showAll ? obj : obj.slice(0, 6);
 
-
     const toggleShowAll = () => {
         setShowAll(!showAll);
 
@@ -93,7 +93,7 @@ function MedicalService() {
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 justify-center items-center p-5 '>
                     {visibleItems.map((item) => (
-                        <div key={item.id} className='border grid grid-cols-2 justify-between items-center shadow-lg bg-white rounded-lg xl:w-[90%] xl:h-52'>
+                        <div key={item.id} className='border grid grid-cols-2 justify-between items-center shadow-lg bg-white rounded-lg xl:w-[90%] xl:h-52'  data-aos="zoom-in" data-aos-duration="500" data-aos-delay={250 * item.id} >
                             <div className='w-[100%] space-y-7 pl-5 font-bold'>
                                 <h1 className='text-2xl xl:text-xl font-poppins'>{item.titile}</h1>
                                 <button className='text-xl lg:text-lg text-orange-600 font-Montserrat'><BookNow/></button>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function MotherBabyCareTable() {
     return (
-        <div>
+        <div className='p-5 space-y-12'>
 
             <div className='bg-[#effffd]'>
                 <h1 className='font-Montserrat font-bold text-[#616f6f] p-5'>Other Services</h1>

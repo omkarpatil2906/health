@@ -150,7 +150,7 @@ function Navbar() {
   }
 
   return (
-    <div className='font-Montserrat font-medium sticky top-0 left-0 z-50 bg-white'>
+    <div className='font-Montserrat font-medium sticky top-0 left-0 z-50 bg-white' >
       <nav>
 
         <div className='lg:hidden'>
@@ -205,15 +205,15 @@ function Navbar() {
 
 
 
-        <ul className='hidden lg:flex justify-between items-center p-4 font-semibold '>
-          <li className='w-[40%]'>
+        <ul className='hidden lg:flex xl:justify-between gap-6 items-center p-4 font-semibold '>
+          <li className='xl:w-[40%]'>
             <Link to="/">
-            <img src="https://www.portea.com/static/logo-bdce0308d6dac6258f5f9c30993083ac.svg" className='h-12' alt="" />
+            <img src="https://www.portea.com/static/logo-bdce0308d6dac6258f5f9c30993083ac.svg" className='h-10 mx-auto' alt="" />
             </Link>
            
           </li>
 
-          <div className='w-[70%] justify-between items-center hidden lg:flex'>
+          <div className='xl:w-[70%] justify-between w-full items-center hidden lg:flex'>
             <li className=''>
               <h1 onClick={handleServicesClick}   className='flex items-center cursor-pointer hover:text-[#00979e] gap-2'> Our Services <span><IoIosArrowDown  className='text-[#00979e] text-xl'/></span></h1>
               <Menu

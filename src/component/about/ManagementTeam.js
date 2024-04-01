@@ -153,10 +153,10 @@ function ManagementTeam() {
         <div className='flex justify-center'>
 
             <div className='xl:w-4/5 space-y-5'>
-                <h1 className='px-4 font-poppins'>About Us</h1>
-                <h2 className='font-bold text-5xl font-Montserrat border-s-4 px-2 border-orange-500'>Meet Our Team</h2>
+                <h1 className='px-4 font-poppins font-bold' data-aos='fade-right' data-aos-duration='1000'>About Us</h1>
+                <h2 className='font-bold text-5xl font-Montserrat border-s-4 px-2 border-orange-500' data-aos='flip-up' data-aos-duration='1000' data-aos-delay='300' >Meet Our Team</h2>
 
-                <h1 className='px-3  text-xl font-poppins'>Management Team</h1>
+                <h1 className='px-3  text-xl font-poppins' data-aos='fade-right' data-aos-duration='1000'>Management Team</h1>
 
                 <hr className='border-orange-500 mx-3 border-2 ' />
 

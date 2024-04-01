@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeVisit from '../HomeVisit'
+import HomeVisit from '../../ourServices/HomeVisit'
 
 function VaccinationHome() {
   return (
